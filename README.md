@@ -7,6 +7,7 @@
 if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
     devtools::install_github('ExposomeX/excros/excros',force = TRUE)
+        devtools::install_github('ExposomeX/extidy/extidy',force = TRUE)
 }
 
 library(excros)
