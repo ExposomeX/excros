@@ -1,0 +1,16 @@
+Package: excros
+Title: It was designed to analyze the cross-sectional data from exposome-wide association study (EWAS).
+Version: 1.0.0
+Authors@R: 
+    person(given='bin',
+    family = 'Wang',
+    role= c('aut','cph','cre'),
+    email = "binwang@pku.edu.cn")
+Description: It was designed to analyze the cross-sectional data from 
+    exposome-wide association study (EWAS). This data structure can be obtained from 
+    the epidemiological designs of cross-section, case-control, and cohort.
+License: GPL (>= 3)e
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports: httr,vroom,ggplot2,readxl,gridExtra
