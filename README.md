@@ -12,7 +12,7 @@ if (!requireNamespace("devtools", quietly = TRUE)){
     
     devtools::install_github('ExposomeX/extidy/extidy',force = TRUE) 
     
-#Note: "extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as delete varaibles with low variance, transforming data type, classifying variable into several level, etc.
+#Note: "extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as deleting varaibles with low variance, transforming data type, classifying variable into several level, etc.
 
 }
 
