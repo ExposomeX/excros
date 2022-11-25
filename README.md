@@ -18,6 +18,7 @@ if (!requireNamespace("devtools", quietly = TRUE)){
 
 
 library(excros)
+library(extidy) #If installed
 
 #OutPath = "D:/test" 
 
