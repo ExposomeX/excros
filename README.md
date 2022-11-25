@@ -12,21 +12,18 @@ if (!requireNamespace("devtools", quietly = TRUE)){
     
     devtools::install_github('ExposomeX/extidy/extidy',force = TRUE) 
     
-#Note: "extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as deleting varaibles with low variance, transforming data type, classifying variable into several level, etc.
+#"extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as deleting varaibles with low variance, transforming data type, classifying variable into several level, etc.
 
 }
 
-
 library(excros)
-library(extidy) #If installed
+library(extidy) 
 
-#OutPath = "D:/test" 
+#OutPath = "D:/test" #The default path is the current working directory of R. Users can use this code to set the preferred path.
 
-#The default path is the current working directory of R. Users can use this code to set the preferred path.
+#For each step, the returned value can be named as users' like by following R language requirement. 
 
-#For each step, the return value can be names as users' like by following R language requirement. 
-
-#Note: All the PID must be the same with the one provided by InitCros function, e.g., res$PID.
+#All the PID must be the same with the one provided by InitCros function, e.g., res$PID.
 
 res = InitCros()
 
@@ -36,6 +33,7 @@ res2 = TransImput(PID=res$PID,
                   Group="T",
                   Vars="all.x",
                   Method="lod")
+                  
 res2$Expo$Data
 
 res2$Expo$Voca
@@ -98,7 +96,6 @@ res12_1 = CrosAsso(PID=res$PID,
                    RepMsr = F,
                    Corstr = "ar1")
 
-
 res13 = VizCrosAsso(PID=res$PID,
                     VarsN="single.factor",
                     Layout = "forest",
@@ -125,5 +122,4 @@ res15 = VizCrosPred(PID=res$PID,
                     Palette = "science")
 
 FuncExit(PID = res$PID) #Thanks for removing all the files from the back-end server. If not, we will remove it later.
-
 
