@@ -5,11 +5,9 @@
 #The ExpoCros module was designed to analyze the cross-sectional data from exposome-wide association study (EWAS). This data structure can be obtained from the epidemiological designs of cross-section, case-control, and cohort. Please see the website (http://www.exposomex.cn/#/expoverse) for more information. Users can install the package using the following code:
 
 if (!requireNamespace("devtools", quietly = TRUE)){
-
     install.packages("devtools")
 }
-
-    
+  
 devtools::install_github('ExposomeX/excros/excros',force = TRUE)
     
 devtools::install_github('ExposomeX/extidy/extidy',force = TRUE) 
