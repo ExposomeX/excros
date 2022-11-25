@@ -5,15 +5,19 @@
 #The ExpoCros module was designed to analyze the cross-sectional data from exposome-wide association study (EWAS). This data structure can be obtained from the epidemiological designs of cross-section, case-control, and cohort. Please see the website (http://www.exposomex.cn/#/expoverse) for more information. Users can install the package using the following code:
 
 if (!requireNamespace("devtools", quietly = TRUE)){
+
     install.packages("devtools")
+    
 }
   
 devtools::install_github('ExposomeX/excros/excros',force = TRUE)
     
 devtools::install_github('ExposomeX/extidy/extidy',force = TRUE) 
+
 #"extidy" package is optional if the data file has been well prepared. However, the it is recommended as users may need tidy the data to meet the modeling requirement, such as deleting varaibles with low variance, transforming data type, classifying variable into several level, etc.
     
 library(excros)
+
 library(extidy) 
 
 #OutPath = "D:/test" #The default path is the current working directory of R. Users can use this code to set the preferred path.
